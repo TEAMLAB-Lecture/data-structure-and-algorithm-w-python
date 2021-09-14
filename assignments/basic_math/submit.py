@@ -3,8 +3,10 @@ import pickle
 import requests
 import json
 
-ASSIGNMENT_ID = 5
-ASSIGNMENT_NAME = "arithmetic_function.py"
+from requests.models import Response
+
+ASSIGNMENT_ID = 6
+ASSIGNMENT_NAME = "basic_math.py"
 
 TOKEN_PICKLE_FILE_NAME = "access_token"
 HOST = "52.79.250.86"
@@ -158,7 +160,9 @@ def main():
         print(
             "Unexpected error exists. Please contact teamlab.gachon@gmail.com"
         )
-
+    else:
+        print(result.reason)
+        print(result.text)
 
 if __name__ == "__main__":
     main()
