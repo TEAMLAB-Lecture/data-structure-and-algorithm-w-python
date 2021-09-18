@@ -3,7 +3,7 @@ import pickle
 import requests
 import json
 
-ASSIGNMENT_ID = 5
+ASSIGNMENT_ID = 3
 ASSIGNMENT_NAME = "arithmetic_function.py"
 
 TOKEN_PICKLE_FILE_NAME = "access_token"
@@ -158,6 +158,10 @@ def main():
         print(
             "Unexpected error exists. Please contact teamlab.gachon@gmail.com"
         )
+    else:
+        print(result)
+        print(result.text)
+        
 
 
 if __name__ == "__main__":
